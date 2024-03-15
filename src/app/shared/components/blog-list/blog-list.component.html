@@ -15,6 +15,11 @@
       alt="blog image"
       class="blog-image"
     />
+    @if (blog.liked) {
+      <mat-icon (click)="toggleLiked(blog.id)">favorite</mat-icon>
+      }@else {
+      <mat-icon (click)="toggleLiked(blog.id)">favorite_border</mat-icon>
+      }
   </div>
   }
 </div>
